@@ -313,8 +313,10 @@ var YaGames;
                     ))
                 }
                 postToParent(e) {
-                    return false;
-                    const t = this._parentTarget;
+                    // return false;
+                    // const t = this._parentTarget;
+                    const t = null;
+                    // console.log("--fx--", t);
                     return t ? (!isUnitedPage() || "messaging" === e.type && "confirm" === e.action || (e.uuid = Math.random().toString(36).substring(2, 15),
                     setTimeout((()=>{
                         e.uuid && !this.receivedMessages.includes(e.uuid) && this.postToParent(e)
